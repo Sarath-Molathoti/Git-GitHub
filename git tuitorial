@@ -1,0 +1,83 @@
+GitHub is a code hosting platform for version control and collaboration. It lets you and others work together on projects from anywhere.
+
+GitHub is a Web-based Git repository hosting service, which offers all of the distributed revision control. Unlike Git, which is strictly a command-line tool, GitHub provides a Web-based graphical interface. GitHub is used for ‘version control’. This means that GitHub is used for software development projects when more than a person(or a group) is working on it.
+
+Git is a version-control system for tracking changes in computer files and coordinating work on those files among multiple people. It is primarily used for source-code management in software development, but it can be used to keep track of changes in any set of files
+
+Version control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
+There are two types of VCS: 
+   1. Centralized Version Control System (CVCS)
+   2. Distributed Version Control System (DVCS)
+
+1.Centralized Version Control System (CVCS)
+   Centralized version control system (CVCS) uses a central server to store all files and enables team collaboration. It works on a single repository to which users can directly access a central server.
+
+2. Distributed Version Control System (DVCS)
+   a) These systems do not necessarily rely on a central server to store all the versions of a project file.
+   b) In Distributed VCS, every contributor has a local copy or “clone” of the main repository i.e. everyone maintains a local repository
+         of their own which contains all the files and metadata present in the main repository.
+   c) Every programmer maintains a local repository on its own, which is actually the copy or clone of the central repository on their
+         hard drive. They can commit and update their local repository without any interference.
+   d) They can update their local repositories with new data from the central server by an operation called “pull” and affect changes to 
+         the main repository by an operation called “push” from their local repository.
+   e) The act of cloning an entire repository into your workstation to get a local repository gives you the following advantages:
+         -> All operations (except push & pull) are very fast because the tool only needs to access the hard drive, not a remote server. 
+            Hence, you do not always need an internet connection.
+         -> Committing new change-sets can be done locally without manipulating the data on the main repository. Once you have a group of 
+            change-sets ready, you can push them all at once.
+         -> Since every contributor has a full copy of the project repository, they can share changes with one another if they want to 
+            get some feedback before affecting changes in the main repository.
+         -> If the central server gets crashed at any point of time, the lost data can be easily recovered from any one of the 
+            contributor’s local repositories. 
+
+----------------------------------------------------GIT OPERATIONS--------------------------------------------------------------------
+Some of the basic operations in Git are:
+  1.Initialize
+  2.Add
+  3.Commit
+  4.Pull
+  5.Push
+Some advanced Git operations are:
+  1.Branching
+  2.Merging
+  3.Rebasing
+
+After installing Git in your windows/ubuntu system, just open your folder/directory where you want to store all your project files; right click and select ‘Open in Terminal(ubuntu)’/‘Git Bash here(windows)’ . This will open up Git Bash terminal where you can enter commands to perform various Git operations.
+
+1.INITIALIZE :-
+  "git init"
+  In order initialize our repository, we use the command "git init".git init creates an empty Git repository or re-initializes an existing
+  one. It basically creates a .git directory with sub directories and template files. Running a git init in an existing repository will not
+  overwrite things that are already there. It rather picks up the newly added templates.
+  i)GIT STATUS :-
+    "git status"
+    The git status command lists all the modified files which are ready to be added to the local repository.Check the files in your 
+    directory/folder which are in(added) index or not using the command git status. The index holds a snapshot of the content of the working
+    tree/directory, and this snapshot is taken as the contents for the next change to be made in the local repository.
+
+2.ADD :-
+  It updates the index using the current content found in the working tree and then prepares the content in the staging area for the next 
+  commit.Thus, after making changes to the working tree, and before running the commit command, you must use the add command to add any new
+  or modified files to the index.
+  git add <directory>
+  (or)
+  git add <file>
+  (or)
+  git add -A. This command will add all the files to the index which are in the directory but not updated in the index yet.Now that the new
+  files are added to the index, you are ready to commit them.
+
+4.PULL :-
+  The git pull command fetches changes from a remote repository to a local repository. It merges upstream changes in your local repository,
+  which is a common task in Git based collaborations.But first, you need to set your central repository as origin using the command:
+  "git remote add origin <link of your central repository>"
+  Now that your origin is set, let us extract files from the origin using pull. For that use the command:
+  "git pull origin master"
+  This command will copy all the files from the master branch of remote repository to your local repository.
+  If your local repository is already updated with files from master branch, then it will show the message  Already up-to-date.you can also
+  try pulling files from a different branch using the following command:
+  git pull origin <branch-name>
+  Now your local Git repository is now updated with all the recent changes.
+
+ 
+
+

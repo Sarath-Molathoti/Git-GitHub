@@ -1,0 +1,15 @@
+sudo apt-get update
+sudo apt-get install git
+git config --global user.email "sarathmolathoti@gmail.com"
+git config --global user.name "Sarath-Molathoti"
+
+git init
+git remote add origin "https://github.com/Sarath-Molathoti/c.git"
+git pull origin master
+
+git status
+git add -A/git add git.txt
+git commit -a -m "Comments"/git commit -m "comments"
+git push origin master
+
+git branch         //shows your local branches.
